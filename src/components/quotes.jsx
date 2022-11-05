@@ -31,7 +31,7 @@ const Quotes = () => {
                 <p style={{color: backgroundColor}}>-{author}</p>
             </div>
             <div id="button-container">
-                <a id="tweet-quote" className='button' href="twitter.com/intent/tweet" target="_blank" title='Tweet this quote!' style={{backgroundColor: backgroundColor}}>
+                <a id="tweet-quote" className='button' href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${'"' + {quoteText} + '", ' + {author}}`} target="_blank" title='Tweet this quote!' style={{backgroundColor: backgroundColor}}>
                     <FaTwitter  />
                 </a>
                 <button id='new-quote' className='button' onClick={() => {newQuote()}} style={{backgroundColor: backgroundColor}}>New Quote</button>
